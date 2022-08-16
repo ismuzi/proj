@@ -50,7 +50,7 @@ def outilercount(indexList, dataLable):
 
 def fdpc_of(dataSet):
     start = time.perf_counter()
-    data, dataLable = getAllData('D:/dataset/' + dataSet + '.csv')    #数据集
+    data, dataLable = getAllData('D:/dataset/' + dataSet + '.csv')    #数据集路径
     k = tck()
     c = tcc()
     nbrs = NearestNeighbors(n_neighbors=k, algorithm="kd_tree").fit(data)
@@ -132,13 +132,13 @@ def fdpc_of(dataSet):
     print("F1为：" + str((2 * re * pr) / (re + pr)))
 
 if __name__ == '__main__':
+    dataSet = 'Ionosphere-1'
+    # dataSet = 'iris'
+    # dataSet = 'wdbc'
+    # dataSet = 'vowels'
     # dataSet = 'D1'
     # dataSet = 'D2'
     # dataSet = 'D3'
     # dataSet = 'D4'
-    # dataSet = 'Ionosphere-1'
-    # dataSet = 'iris'
-    # dataSet = 'wdbc'
-    dataSet = 'vowels'
     fdpc_of(dataSet)
 
