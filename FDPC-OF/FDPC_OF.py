@@ -117,7 +117,7 @@ def fdpc_of(dataSet):
     print(
         "算法FDPC-OF在数据集" + dataSet + "中的实验结果-----------------------------------------------------------------------------------")
     print("数据集中真实的离群点有：" + str(outs))
-    print("前" + str(outs) + "个最大的里离群分数中是离群点的有" + str(Detectoutlercount))
+    print("前" + str(outs) + "个最大的离群分数中是离群点的有" + str(Detectoutlercount))
     print('执行所用时间 %s' % str(end - start))
     print("精确率为：" + str(pr))
     Detectoutlercount = 0.0
